@@ -167,21 +167,21 @@ async function getRecommendedSize(req, res) {
       });
     }
 
-    const isMeasurement = await Measurement.findOne({
-      where: {
-        recommended_size: recommendedSizeName,
-      },
-    });
-    if (!isMeasurement) {
-      await Measurement.create({
-        height: measurements.height,
-        weight: measurements.weight,
-        chest: measurements.chest,
-        waist: measurements.waist,
-        hip: measurements.hip,
-        recommended_size: recommendedSizeName,
-      });
-    }
+    // const isMeasurement = await Measurement.findOne({
+    //   where: {
+    //     recommended_size: recommendedSizeName,
+    //   },
+    // });
+    // if (!isMeasurement) {
+    //   await Measurement.create({
+    //     height: measurements.height,
+    //     weight: measurements.weight,
+    //     chest: measurements.chest,
+    //     waist: measurements.waist,
+    //     hip: measurements.hip,
+    //     recommended_size: recommendedSizeName,
+    //   });
+    // }
 
     // const recommendedSize = recommendedSizeId
     //   ? await Size.findByPk(recommendedSizeId, { raw: true })
