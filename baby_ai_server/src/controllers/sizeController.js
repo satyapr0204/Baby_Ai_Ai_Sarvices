@@ -196,7 +196,9 @@ async function getRecommendedSize(req, res) {
           null
         : null;
 
-    const clothesWhere = { ...productWhere };
+    const clothesWhere = {
+      ...productWhere,
+    };
 
     if (recommendedSizeId) {
       clothesWhere.size_id = recommendedSizeId;
